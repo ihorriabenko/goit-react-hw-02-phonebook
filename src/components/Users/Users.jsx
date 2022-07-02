@@ -27,7 +27,7 @@ const Users = ({ removeUser ,getFilteredUsers, handleFilter }) => {
 
 Users.propTypes = {
   removeUser: PropTypes.func.isRequired,
-  getFilteredUsers: PropTypes.array,
+  getFilteredUsers: PropTypes.arrayOf(PropTypes.exact({name: PropTypes.string.isRequired, number: PropTypes.string.isRequired, id: PropTypes.string.isRequired})),
   handleFilter: PropTypes.func.isRequired,
 }
 
